@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Job Bank</title>
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <link href="css/index.css" rel="stylesheet">
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.37.0/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.37.0/mapbox-gl.css' rel='stylesheet' />
+</head>
+<body>
+  <form>
+  NOC:<br>
+  <input type="text" name="noc" id='noc' val = 7241><br>
+  </form>
+  <button onclick="pullData()"> Search </button>
+  <!-- <div id="map"></div> -->
+  <div id="content"></div>
+
+  <script src="js/index.js"></script>
+  <script>
+  mapboxgl.accessToken = 'pk.eyJ1Ijoiam9zaHVhLWxvb25nIiwiYSI6ImNqMm01ODQ4cTAwc28ycW93ZGV1cWR5amIifQ.ZxuCP_hBIHqxPUon6vX7jg';
+  var map = new mapboxgl.Map({
+      container: 'map', // container id
+      style: 'mapbox://styles/mapbox/streets-v9', //stylesheet location
+      center: [51.2538, 85.3232], // starting position
+      zoom: 5 // starting zoom
+  });
+  </script>
+</body>
+
+
+</html>
